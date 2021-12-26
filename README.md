@@ -12,3 +12,4 @@ Pembagian Tugas:
 1. Dita Faradila - 
 2. Ahmad Abdan Syakuro - 
 3. Riutaqy Fawwazdary - 
+![koperasi](https://user-images.githubusercontent.com/74691609/147408144-48727ea6-8b70-4d0c-8181-2a850b917ec3.png)
