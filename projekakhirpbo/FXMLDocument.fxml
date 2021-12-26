@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projekakhirpbo.FXMLDocumentController">
+   <children>
+      <AnchorPane layoutY="27.0" prefHeight="693.0" prefWidth="1280.0">
+         <children>
+            <TabPane prefHeight="693.0" prefWidth="1280.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Individual">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <HBox prefHeight="665.0" prefWidth="1280.0">
+                                 <children>
+                                    <AnchorPane prefHeight="665.0" prefWidth="349.0" style="-fx-background-color: #ecd4ff;">
+                                       <children>
+                                          <TextField fx:id="tfIDIndividual" disable="true" layoutX="30.0" layoutY="80.0" prefHeight="38.0" prefWidth="268.0" promptText="ID Nasabah" />
+                                          <TextField fx:id="tfNamaIndividual" layoutX="30.0" layoutY="126.0" prefHeight="38.0" prefWidth="268.0" promptText="Nama Nasabah" />
+                                          <TextField fx:id="tfAlamatIndividual" layoutX="30.0" layoutY="172.0" prefHeight="38.0" prefWidth="268.0" promptText="Alamat Nasabah">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font></TextField>
+                                          <TextField fx:id="tfNIKIndividual" layoutX="30.0" layoutY="218.0" prefHeight="38.0" prefWidth="268.0" promptText="NIK Nasabah">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font></TextField>
+                                          <TextField fx:id="tfNPWPIndividual" layoutX="30.0" layoutY="264.0" prefHeight="38.0" prefWidth="268.0" promptText="NPWP Nasabah" />
+                                          <TextField fx:id="tfNoRekIndividual" disable="true" layoutX="29.0" layoutY="342.0" prefHeight="38.0" prefWidth="268.0" promptText="Nomor Rekening" />
+                                          <TextField fx:id="tfSaldoRekIndividual" layoutX="29.0" layoutY="388.0" prefHeight="38.0" prefWidth="268.0" promptText="Saldo Rekening" />
+                                          <Button fx:id="btnAddIndividual" layoutX="82.0" layoutY="468.0" mnemonicParsing="false" onAction="#handleTambahNasabahIndividual" prefHeight="38.0" prefWidth="155.0" text="Tambah Data">
+                                             <font>
+                                                <Font name="Arial Black" size="12.0" />
+                                             </font></Button>
+                                          <Button fx:id="btnPerbaruiIndividual" layoutX="82.0" layoutY="514.0" mnemonicParsing="false" onAction="#handlePerbaruiTabelIndividual" prefHeight="38.0" prefWidth="155.0" text="Perbarui Data">
+                                             <font>
+                                                <Font name="Arial Black" size="12.0" />
+                                             </font></Button>
+                                          <Button fx:id="btnHapusIndividual" layoutX="81.0" layoutY="560.0" mnemonicParsing="false" onAction="#handleHapusIndividual" prefHeight="38.0" prefWidth="156.0" text="Hapus Form">
+                                             <font>
+                                                <Font name="Arial Black" size="12.0" />
+                                             </font></Button>
+                                          <Label fx:id="lblAddStatusindividual" alignment="CENTER" contentDisplay="CENTER" layoutX="30.0" layoutY="440.0" prefHeight="23.0" prefWidth="265.0" textAlignment="CENTER">
+                                             <font>
+                                                <Font name="Segoe UI" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="650.0" prefWidth="954.0">
+                                       <children>
+                                          <VBox prefHeight="666.0" prefWidth="932.0">
+                                             <children>
+                                                <AnchorPane prefHeight="348.0" prefWidth="934.0">
+                                                   <children>
+                                                      <TableView fx:id="tblDataIndividu" layoutX="-1.0" layoutY="47.0" prefHeight="337.0" prefWidth="935.0">
+                                                        <columns>
+                                                          <TableColumn fx:id="colIDIndividu" prefWidth="95.0" text="ID" />
+                                                          <TableColumn fx:id="colNamaIndividu" prefWidth="231.0" text="Nama" />
+                                                            <TableColumn fx:id="colAlamatIndividu" prefWidth="157.0" text="Alamat" />
+                                                            <TableColumn fx:id="colNIK" prefWidth="175.0" text="NIK" />
+                                                            <TableColumn fx:id="colNPWP" prefWidth="168.0" text="NPWP" />
+                                                            <TableColumn fx:id="colJumAkunIndividu" prefWidth="107.0" text="+ Akun" />
+                                                        </columns>
+                                                      </TableView>
+                                                      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="277.0" layoutY="-2.0" text="Sistem Koperasi Simpan Pinjam" textAlignment="CENTER" underline="true">
+                                                         <font>
+                                                            <Font name="ArnoPro-BoldDisplay" size="29.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </AnchorPane>
+                                                <HBox prefHeight="262.0" prefWidth="932.0">
+                                                   <children>
+                                                      <AnchorPane prefHeight="262.0" prefWidth="465.0">
+                                                         <children>
+                                                            <TableView fx:id="tblRekeningIndividu" prefHeight="261.0" prefWidth="465.0">
+                                                              <columns>
+                                                                <TableColumn fx:id="colNumRekIndividu" prefWidth="226.0" text="Nomor Rekening" />
+                                                                <TableColumn fx:id="colSaldoIndividu" prefWidth="238.0" text="Saldo" />
+                                                              </columns>
+                                                            </TableView>
+                                                         </children>
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </AnchorPane>
+                                                      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="262.0" prefWidth="470.0" style="-fx-background-color: #ecd4ff;">
+                                                         <HBox.margin>
+                                                            <Insets right="10.0" />
+                                                         </HBox.margin>
+                                                         <children>
+                                                            <TextField fx:id="tfIDNasabahBaruIndividual" disable="true" layoutX="17.0" layoutY="40.0" prefHeight="38.0" prefWidth="210.0" promptText="ID Nasabah" />
+                                                            <TextField fx:id="tfNoRekBaruIndividual" disable="true" layoutX="17.0" layoutY="86.0" prefHeight="38.0" prefWidth="210.0" promptText="Nomor Rekening Baru" />
+                                                            <TextField fx:id="tfSaldoRekBaruIndividual" layoutX="17.0" layoutY="132.0" prefHeight="38.0" prefWidth="210.0" promptText="Saldo Rekening Baru" />
+                                                            <Button fx:id="btnTambahRekBaruIndividual" layoutX="17.0" layoutY="178.0" mnemonicParsing="false" onAction="#handleTambahRekBaruIndividual" prefHeight="38.0" prefWidth="150.0" text="Tambah Rekening">
+                                                               <font>
+                                                                  <Font name="Arial Black" size="12.0" />
+                                                               </font></Button>
+                                                            <TextField fx:id="tfRekeningDipilihIndividual" disable="true" layoutX="245.0" layoutY="40.0" prefHeight="38.0" prefWidth="210.0" promptText="Rekening Dipilih" />
+                                                            <TextField fx:id="tfNominalIndividual" layoutX="245.0" layoutY="86.0" prefHeight="38.0" prefWidth="210.0" promptText="Nominal" />
+                                                            <Button fx:id="btnTarikTunaiIndividual" layoutX="245.0" layoutY="178.0" mnemonicParsing="false" onAction="#handleTarikTunaiIndividual" prefHeight="38.0" prefWidth="123.0" text="Tarik Tunai">
+                                                               <font>
+                                                                  <Font name="Arial Black" size="12.0" />
+                                                               </font></Button>
+                                                            <Button fx:id="btnTambahSaldoIndividual" layoutX="245.0" layoutY="132.0" mnemonicParsing="false" onAction="#handleTambahSaldoIndividual" prefHeight="38.0" prefWidth="123.0" text="Tambah Saldo">
+                                                               <font>
+                                                                  <Font name="Arial Black" size="12.0" />
+                                                               </font></Button>
+                                                            <Label fx:id="lblTarikTambahIndividu" alignment="CENTER" contentDisplay="CENTER" layoutX="84.0" layoutY="217.0" prefHeight="23.0" prefWidth="272.0" textAlignment="CENTER">
+                                                               <font>
+                                                                  <Font name="Segoe UI" size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="Perusahaan">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <HBox prefHeight="665.0" prefWidth="1280.0">
+                                 <children>
+                                    <AnchorPane prefHeight="665.0" prefWidth="349.0" style="-fx-background-color: #ffcbc1;">
+                                       <children>
+                                          <TextField fx:id="tfIDPerusahaan" disable="true" layoutX="30.0" layoutY="80.0" prefHeight="38.0" prefWidth="268.0" promptText="ID Nasabah" />
+                                          <TextField fx:id="tfNamaPerusahaan" layoutX="30.0" layoutY="126.0" prefHeight="38.0" prefWidth="268.0" promptText="Nama Perusahaan" />
+                                          <TextField fx:id="tfAlamatPerusahaan" layoutX="30.0" layoutY="172.0" prefHeight="38.0" prefWidth="268.0" promptText="Alamat Perusahaan" />
+                                          <TextField fx:id="tfNIBPerusahaan" layoutX="30.0" layoutY="218.0" prefHeight="38.0" prefWidth="268.0" promptText="NIB Perusahaan" />
+                                          <TextField fx:id="tfNoRekPerusahaan" disable="true" layoutX="29.0" layoutY="295.0" prefHeight="38.0" prefWidth="268.0" promptText="Nomor Rekening" />
+                                          <TextField fx:id="tfSaldoPerusahaan" layoutX="29.0" layoutY="341.0" prefHeight="38.0" prefWidth="268.0" promptText="Saldo Rekening" />
+                                          <Button fx:id="btnAddPerusahaan" layoutX="86.0" layoutY="468.0" mnemonicParsing="false" onAction="#handleTambahNasabahPerusahaan" prefHeight="38.0" prefWidth="141.0" text="Tambah Data">
+                                             <font>
+                                                <Font name="Arial Black" size="12.0" />
+                                             </font></Button>
+                                          <Button fx:id="btnPerbaruiPerusahaan" layoutX="84.0" layoutY="514.0" mnemonicParsing="false" onAction="#handlePerbaruiTabelPerusahaan" prefHeight="38.0" prefWidth="143.0" text="Perbarui Data">
+                                             <font>
+                                                <Font name="Arial Black" size="12.0" />
+                                             </font></Button>
+                                          <Button fx:id="btnHapusPerusahaan" layoutX="84.0" layoutY="560.0" mnemonicParsing="false" onAction="#handleHapusPerusahaan" prefHeight="38.0" prefWidth="143.0" text="Hapus Form">
+                                             <font>
+                                                <Font name="Arial Black" size="12.0" />
+                                             </font></Button>
+                                          <Label fx:id="lblAddStatusPerusahaan" alignment="CENTER" contentDisplay="CENTER" layoutX="30.0" layoutY="415.0" prefHeight="23.0" prefWidth="269.0" textAlignment="CENTER">
+                                             <font>
+                                                <Font name="Segoe UI" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="650.0" prefWidth="954.0">
+                                       <children>
+                                          <VBox prefHeight="666.0" prefWidth="932.0">
+                                             <children>
+                                                <AnchorPane prefHeight="348.0" prefWidth="934.0">
+                                                   <children>
+                                                      <TableView fx:id="tblDataPerusahaan" layoutY="45.0" prefHeight="337.0" prefWidth="934.0">
+                                                         <columns>
+                                                            <TableColumn fx:id="colIDPerusahaan" prefWidth="95.0" text="ID" />
+                                                            <TableColumn fx:id="colNamaPerusahaan" prefWidth="255.0" text="Nama" />
+                                                            <TableColumn fx:id="colAlamatPerusahaan" prefWidth="250.0" text="Alamat" />
+                                                            <TableColumn fx:id="colNIB" prefWidth="195.0" text="NIB" />
+                                                            <TableColumn fx:id="colJumAkunPerusahaan" prefWidth="138.0" text="+ Akun" />
+                                                         </columns>
+                                                      </TableView>
+                                                      <Label layoutX="274.0" layoutY="-5.0" text="Sistem Koperasi Simpan Pinjam" textAlignment="CENTER" underline="true">
+                                                         <font>
+                                                            <Font name="ArnoPro-BoldDisplay" size="29.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </AnchorPane>
+                                                <HBox prefHeight="262.0" prefWidth="932.0">
+                                                   <children>
+                                                      <AnchorPane prefHeight="262.0" prefWidth="465.0">
+                                                         <children>
+                                                            <TableView fx:id="tblRekeningPerusahaan" prefHeight="261.0" prefWidth="465.0">
+                                                               <columns>
+                                                                  <TableColumn fx:id="colNumRekPerusahaan" prefWidth="226.0" text="Nomor Rekening" />
+                                                                  <TableColumn fx:id="colSaldoPerusahaan" prefWidth="238.0" text="Saldo" />
+                                                               </columns>
+                                                            </TableView>
+                                                         </children>
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </AnchorPane>
+                                                      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="262.0" prefWidth="470.0" style="-fx-background-color: #ffcbc1;">
+                                                         <HBox.margin>
+                                                            <Insets right="10.0" />
+                                                         </HBox.margin>
+                                                         <children>
+                                                            <TextField fx:id="tfIDNasabahBaruPerusahaan" disable="true" layoutX="17.0" layoutY="40.0" prefHeight="38.0" prefWidth="210.0" promptText="ID Nasabah" />
+                                                            <TextField fx:id="tfNoRekBaruPerusahaan" disable="true" layoutX="17.0" layoutY="86.0" prefHeight="38.0" prefWidth="210.0" promptText="Nomor Rekening Baru" />
+                                                            <TextField fx:id="tfSaldoRekBaruPerusahaan" layoutX="17.0" layoutY="132.0" prefHeight="38.0" prefWidth="210.0" promptText="Saldo Rekening Baru" />
+                                                            <Button fx:id="btnTambahRekBaruPerusahaan" layoutX="17.0" layoutY="178.0" mnemonicParsing="false" onAction="#handleTambahRekBaruPerusahaan" prefHeight="38.0" prefWidth="153.0" text="Tambah Rekening">
+                                                               <font>
+                                                                  <Font name="Arial Black" size="12.0" />
+                                                               </font></Button>
+                                                            <TextField fx:id="tfRekeningDipilihPerusahaan" disable="true" layoutX="245.0" layoutY="40.0" prefHeight="38.0" prefWidth="210.0" promptText="Rekening Dipilih" />
+                                                            <TextField fx:id="tfNominalPerusahaan" layoutX="245.0" layoutY="86.0" prefHeight="38.0" prefWidth="210.0" promptText="Nominal" />
+                                                            <Button fx:id="btnTarikTunaiPerusahaan" layoutX="245.0" layoutY="178.0" mnemonicParsing="false" onAction="#handleTarikTunaiPerusahaan" prefHeight="38.0" prefWidth="117.0" text="Tarik Tunai">
+                                                               <font>
+                                                                  <Font name="Arial Black" size="12.0" />
+                                                               </font></Button>
+                                                            <Button fx:id="btnTambahSaldoPerusahaan" layoutX="245.0" layoutY="132.0" mnemonicParsing="false" onAction="#handleTambahSaldoPerusahaan" prefHeight="38.0" prefWidth="117.0" text="Tambah Saldo" />
+                                                            <Label fx:id="lblTambahTarikPerusahaan" alignment="CENTER" contentDisplay="CENTER" layoutX="104.0" layoutY="220.0" prefHeight="23.0" prefWidth="252.0" textAlignment="CENTER">
+                                                               <font>
+                                                                  <Font name="Segoe UI" size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+      <Label layoutX="1119.0" layoutY="6.0" text="Database : " />
+      <Label fx:id="lblDBStatus" layoutX="1179.0" layoutY="6.0" />
+   </children>
+</AnchorPane>
